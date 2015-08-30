@@ -16,5 +16,5 @@ var findMissingNumber = function(array) {
   return completeSum - actualSum;
 };
 
-// console.log(findMissingNumber([4, 2, 1])); // 3
-// console.log(findMissingNumber([4, 2, 1, 3, 6, 5, 9, 7])); // 8
+console.log(findMissingNumber([4, 2, 1])); // 3
+console.log(findMissingNumber([4, 2, 1, 3, 6, 5, 9, 7])); // 8

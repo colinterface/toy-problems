@@ -4,11 +4,6 @@ var Node = function(value) {
   this.next = null;
 };
 
-// var LinkedList = function(initialValue) {
-//   this.value = new Node(initialValue);
-//   this.length = 1;
-// }
-
 Node.prototype.appendToTail = function(value) {
   var node = this;
   while (node.next !== null) {
