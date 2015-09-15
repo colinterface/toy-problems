@@ -23,29 +23,19 @@ function generateStockPrices(initialPrice, variance) {
 
 }
 
-function findGreatestProfit(stockPrices) {
+function getMaxProfit(stockPrices) {
 
-  const greatestFuturePrices = [];
+  let minPrice = stockPrices[0];
+  let maxProfit = stockPrices[1] - stockPrices[0];
 
-  let greatestFuturePrice = Number.NEGATIVE_INFINITY;
-  for (let i = stockPrices.length - 1; i >= 0; i--) {
-    greatestFuturePrices[i] = greatestFuturePrice;
-    if (stockPrices[i] > greatestFuturePrice) {
-      greatestFuturePrice = stockPrices[i];
-    }
-  }
-
-  let greatestProfit = Number.NEGATIVE_INFINITY;
-  stockPrices.forEach((price, i) => {
-    let profit = greatestFuturePrices[i] - price;
-    if ((profit) > greatestProfit) {
-      greatestProfit = profit;
-    }
+  stockPrices.forEach((price) => {
+    let potentialProfit = price - minPrice;
+    maxProfit = Math.max(maxProfit, potentialProfit);
+    minPrice = Math.min(minPrice, price);
   });
 
-  return greatestProfit;
-
+  return maxProfit;
 }
 
 const stockPricesYesterday = generateStockPrices(500, 10);
-console.log(findGreatestProfit(stockPricesYesterday));
+console.log(getMaxProfit(stockPricesYesterday));
