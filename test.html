@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+    <script type="text/javascript">
+
+
+    function longestTreePath(node) {
+      if (!node.childNodes || !node.childNodes.length) {
+        return 1;
+      }
+
+      return Math.max.apply(this, [].slice.call(node.childNodes).map(function(childNode) {
+        return 1 + longestTreePath(childNode);
+      }));
+    }
+
+    console.log(longestTreePath(document));
+    </script>
+    <div>
+      <span>
+        <div>
+          <span>
+            <h1>
+              <p>
+                <span>test</span>
+
+              </p>
+            </h1>
+          </span>
+        </div>
+      </span>
+    </div>
+  </body>
+</html>
