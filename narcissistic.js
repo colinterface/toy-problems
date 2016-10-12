@@ -5,7 +5,7 @@
 
 
 function isNarcissistic(n) {
-  return n === n.toString().split('').reduce(function(sum, digit, index, digits) {
+  return n === n.toString().split('').reduce((sum, digit, i, digits) => {
     return sum + Math.pow(digit, digits.length);
   }, 0);
 }
