@@ -14,7 +14,7 @@ simulateFlood(landscape);
 
 function generateLandscape(width, maxHeight) {
   const result = [];
-  for (var i  = 0; i < width; i++) {
+  while (result.length < width) {
     result.push(Math.ceil(Math.random() * maxHeight));
   }
   return result;
