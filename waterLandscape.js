@@ -8,6 +8,11 @@
 
 const width = 20;
 const maxHeight = 10;
+const symbols = {
+  water: '~~~',
+  block: '[X]',
+  air: '   '
+};
 
 const landscape = generateLandscape(width, maxHeight);
 simulateFlood(landscape);
@@ -59,11 +64,11 @@ function simulateFlood(landscape) {
     var row = '';
     for (var x = 0; x < width; x++) {
       if (landscape[x] >= y) {
-        row += '[#]';
+        row += symbols.block;
       } else if (maxBoth[x] >= y) {
-        row += '~~~'
+        row += symbols.water;
       } else {
-        row += '   ';
+        row += symbols.air;
       }
 
     }
