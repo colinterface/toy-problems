@@ -1,0 +1,72 @@
+0 info it worked if it ends with ok
+1 verbose cli [ '/usr/local/bin/node',
+1 verbose cli   '/usr/local/bin/npm',
+1 verbose cli   'i',
+1 verbose cli   '-g',
+1 verbose cli   'speed-test' ]
+2 info using npm@4.1.1
+3 info using node@v7.4.0
+4 silly loadCurrentTree Starting
+5 silly install loadCurrentTree
+6 silly install readGlobalPackageData
+7 silly fetchPackageMetaData speed-test
+8 silly fetchNamedPackageData speed-test
+9 silly mapToRegistry name speed-test
+10 silly mapToRegistry using default registry
+11 silly mapToRegistry registry https://registry.npmjs.org/
+12 silly mapToRegistry data Result {
+12 silly mapToRegistry   raw: 'speed-test',
+12 silly mapToRegistry   scope: null,
+12 silly mapToRegistry   escapedName: 'speed-test',
+12 silly mapToRegistry   name: 'speed-test',
+12 silly mapToRegistry   rawSpec: '',
+12 silly mapToRegistry   spec: 'latest',
+12 silly mapToRegistry   type: 'tag' }
+13 silly mapToRegistry uri https://registry.npmjs.org/speed-test
+14 verbose request uri https://registry.npmjs.org/speed-test
+15 verbose request no auth needed
+16 info attempt registry request try #1 at 11:06:05 AM
+17 verbose request using bearer token for auth
+18 verbose request id ce19fc8dd4c306ba
+19 http request GET https://registry.npmjs.org/speed-test
+20 info retry will retry, error on last attempt: Error: getaddrinfo ENOTFOUND registry.npmjs.org registry.npmjs.org:443
+21 info attempt registry request try #2 at 11:06:45 AM
+22 verbose request using bearer token for auth
+23 http request GET https://registry.npmjs.org/speed-test
+24 info retry will retry, error on last attempt: Error: getaddrinfo ENOTFOUND registry.npmjs.org registry.npmjs.org:443
+25 info attempt registry request try #3 at 11:08:15 AM
+26 verbose request using bearer token for auth
+27 http request GET https://registry.npmjs.org/speed-test
+28 silly fetchPackageMetaData Error: getaddrinfo ENOTFOUND registry.npmjs.org registry.npmjs.org:443
+28 silly fetchPackageMetaData     at errnoException (dns.js:28:10)
+28 silly fetchPackageMetaData     at GetAddrInfoReqWrap.onlookup [as oncomplete] (dns.js:76:26)
+28 silly fetchPackageMetaData  error for speed-test { Error: getaddrinfo ENOTFOUND registry.npmjs.org registry.npmjs.org:443
+28 silly fetchPackageMetaData     at errnoException (dns.js:28:10)
+28 silly fetchPackageMetaData     at GetAddrInfoReqWrap.onlookup [as oncomplete] (dns.js:76:26)
+28 silly fetchPackageMetaData   code: 'ENOTFOUND',
+28 silly fetchPackageMetaData   errno: 'ENOTFOUND',
+28 silly fetchPackageMetaData   syscall: 'getaddrinfo',
+28 silly fetchPackageMetaData   hostname: 'registry.npmjs.org',
+28 silly fetchPackageMetaData   host: 'registry.npmjs.org',
+28 silly fetchPackageMetaData   port: 443 }
+29 silly rollbackFailedOptional Starting
+30 verbose stack TypeError: Cannot read property 'path' of null
+30 verbose stack     at Installer.rollbackFailedOptional (/usr/local/lib/node_modules/npm/lib/install.js:511:29)
+30 verbose stack     at Array.<anonymous> (/usr/local/lib/node_modules/npm/node_modules/slide/lib/bind-actor.js:15:8)
+30 verbose stack     at LOOP (/usr/local/lib/node_modules/npm/node_modules/slide/lib/chain.js:15:14)
+30 verbose stack     at /usr/local/lib/node_modules/npm/node_modules/slide/lib/chain.js:18:7
+30 verbose stack     at /usr/local/lib/node_modules/npm/lib/install.js:337:5
+30 verbose stack     at Array.<anonymous> (/usr/local/lib/node_modules/npm/node_modules/slide/lib/bind-actor.js:15:8)
+30 verbose stack     at LOOP (/usr/local/lib/node_modules/npm/node_modules/slide/lib/chain.js:15:14)
+30 verbose stack     at chain (/usr/local/lib/node_modules/npm/node_modules/slide/lib/chain.js:20:5)
+30 verbose stack     at /usr/local/lib/node_modules/npm/lib/install.js:294:5
+30 verbose stack     at /usr/local/lib/node_modules/npm/node_modules/slide/lib/chain.js:16:22
+31 verbose cwd /Users/ultralame/work/toy-problems
+32 error Darwin 16.4.0
+33 error argv "/usr/local/bin/node" "/usr/local/bin/npm" "i" "-g" "speed-test"
+34 error node v7.4.0
+35 error npm  v4.1.1
+36 error Cannot read property 'path' of null
+37 error If you need help, you may report this error at:
+37 error     <https://github.com/npm/npm/issues>
+38 verbose exit [ 1, true ]
